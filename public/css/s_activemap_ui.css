@@ -1,0 +1,608 @@
+#map {
+    width:100%;
+    height:100%;
+}
+.content {
+    width:100%;
+}
+
+::-webkit-scrollbar{
+    width:4px;
+}
+
+::-webkit-scrollbar:vertical{
+    width:4px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+
+::-webkit-scrollbar-track{
+    border-width:0;
+    
+}
+
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eee;
+}
+
+#baseLayerContainer{
+    background: none repeat scroll 0 0 #C0CCD4;
+    padding: 5px;
+    position: absolute;
+    top:10px;
+    right:10px;
+    z-index: 99;
+}
+#baseLayerContainer .schemasContainer{
+    float: left;
+    margin-right: 10px;
+}
+#baseLayerContainer .spacesContainer{
+    float: left;
+}
+
+.title{
+    font: 16pt Arial;
+    font-weight: bold;
+    color: white;
+    line-height: 38px;
+    width: 658px;
+    margin: 0px 0px 0px 7px;
+    display:block;
+}
+
+#roll-up {
+    -o-opacity:1;
+    -moz-opacity:1;
+    -webkit-opacity:1; 
+    opacity:1;
+     
+    position:absolute; 
+    right:10px; 
+    top: 102px; 
+    cursor:pointer; 
+    background:#7B929A; 
+    width: 310px; 
+    height:30px; 
+    z-index:1000;
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    border-right:2px solid #9FB1C3; 
+    border-left:2px solid #9FB1C3; 
+    border-top:2px solid #9FB1C3;
+    
+    -webkit-transition: all 1.0s;
+    -o-transition: all 1.0s;
+    -moz-transition: all 1.0s;
+    transition: all 1.0s;
+}
+
+#roll-up p {
+    color:#FFFFFF;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    text-align: center;
+    font-weight: bold;
+}
+
+#groups{
+    width: 310px;
+    height: 20px;
+    /*padding: 15px;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    position: absolute;
+    background-color: white;
+    right: 10px;
+    top: 130px;
+    border: 2px solid #94A9BF;
+    border-top: 2px solid #ffffff;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+#groups .layers{margin:3px;}
+#groups .layers .layer{padding: 5px;}
+#groups .layers .layer:nth-child(2n){background:#EAEFF1;}
+#groups .layers .layer .checkbox-layer{ margin: 3px; }
+
+.mapsurfer-popup-content p {
+    margin: 0 0 10px;
+}
+
+div #accordion {
+    width:225px;
+}
+
+#user-panel {
+    width:400px;
+    position: absolute;
+    left:10px;
+    top:129px;
+    border:1px solid #000000;
+    z-index:1000;
+    background: #ffffff;
+    border:2px solid #94A9BF;
+    border-top:0px solid #ffffff;
+    display: block;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#user-panel .report {
+    width:200px;
+    height:35px;
+    background: #7B929A;
+    border-radius:0px;
+    display:block;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#user-panel .report:hover {
+    background: #A7BBC2;
+}
+
+#user-panel .report1, .report2, .report3 {
+    width: 250px; height: 30px; background: #7B97A4; border: 1px solid #7B929A; margin: 5px 0px 5px 0px; color:#ffffff;
+    
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#user-panel .report1:hover, .report2:hover, .report3:hover {
+    background: #A7BBC2;
+}
+
+#user-panel form fieldset {
+    width: 94%; border: 1px solid #7b97a4; padding: 0px 0px 0px 10px; margin-left: 2px;
+}
+
+#user-panel form fieldset legend {
+    font-size: 16px; font-family: Arial, sans-serif; font-weight: bold; padding: 0px 5px 0px 5px; width: auto; border-bottom: 0; margin-bottom: 0; line-height: 40px; color:#365C6D; letter-spacing: 1px; 
+}
+
+#user-panel #my-contours .chbks {
+    margin:5px 0px 10px 10px;
+}
+
+#user-panel #my-contours .chbks input[type="checkbox"] {
+    float:left;
+    margin: 5px 5px 0px 0px;
+}
+
+#user-panel #my-contours .chbks label {
+    padding-left: 20px;
+    padding-top: 1px;
+    width: 200px;
+}
+
+#user-panel #layer-legend .legend {
+    overflow: auto;
+    width:343px;
+    min-width: 284px;
+}
+
+#user-panel input[type="radio"] {
+    float:left; margin: 4px 5px 0px 0px;
+}
+
+.roll-user-panel {
+    width:400px;
+    position: absolute;
+    top:100px;
+    left:10px;
+    height:25px;
+    border:2px solid #94A9BF;
+    border-bottom:2px solid #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index:1000;
+    background: #7B929A;
+    cursor:pointer;
+    
+    opacity:0.5;
+    -webkit-opacity:0.5;
+    -moz-opacity:0.5;
+    -o-opacity:0.5;
+    
+    -webkit-transition: all 1.0s;
+    -o-transition: all 1.0s;
+    -moz-transition: all 1.0s;
+    transition: all 1.0s;
+}
+
+.roll-user-panel p {
+    color:#FFFFFF;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Изменяем стиль навигатора по карте*/
+.zoom-control {
+    top:90px;
+}
+
+#div-popup-form .cancel {
+    width: 120px; height: 30px; border: 1px solid #88928B; border-radius: 3px; padding: 3px; background: #88928B; color: #FFFFFF; cursor: pointer; margin: 0px 0px 0px 0px;
+}
+
+#div-popup-form .change {
+    width: 120px; height: 30px; border: 1px solid steelblue; border-radius: 3px; padding: 3px; background: steelblue; color: #FFFFFF; cursor: pointer; margin: 0px 0px 0px 0px;
+}
+
+#div-popup-form .save {
+    width:120px; height:30px; border: 1px solid #3AB95B; border-radius:3px; padding:3px; background:#3AB95B; color:#FFFFFF; cursor:pointer; margin:0px 0px 0px 0px;
+}
+
+#div-popup-form #show-saved-layer {
+    float:left;
+}
+
+#dialog-box {
+    width:980px;
+    height:auto;
+}
+
+#group1 #radio1, #radio2 {
+    float: left;
+    opacity:0;
+    -webkit-opacity:0;
+    -moz-opacity:0;
+    -o-opacity:0;
+}
+
+#group1 input[type="radio"]+label {
+    margin:3px 0px 3px 0px;
+    width: 260px;
+    height: 30px;
+    background: #7B97A4;
+    color:#ffffff;
+    line-height: 2;
+    text-align: center;
+    font-size: 11pt;
+    
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#group1 input[type="radio"]+label:hover, .plan-form:hover, .fact-form:hover {
+    background: #A1B9C4;
+}
+
+#group1 .p-form-show, .f-form-show {
+    display: block;border-bottom: 2px solid #9EB1C3;border-left: 2px solid #9EB1C3;border-right: 2px solid #9EB1C3; padding-left: 4px;padding-bottom: 5px;margin-top: -3px;
+}
+
+#group1 .plan-form, .fact-form {
+    border: 1px solid #7B97A4;
+    margin:5px 0px 5px 0px;
+    width: 250px;
+    height: 30px;
+    background: #7B97A4;
+    color:#ffffff;
+    font-size: 11pt;
+    
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#group1 .plan-form:hover, .fact-form:hover {
+    background: #A1B9C4;
+}
+
+#group1 .c-form-title {
+    border: 2px solid #98ADBD;
+    /*width: 250px;*/ /*Делает строку заголовка уже*/
+    height: 25px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 11pt;
+    color: #F9FBF7;
+    letter-spacing: 1px;
+    background: #98ADBD;
+}
+
+#group1 .c-form {
+    display: block;
+    border-bottom: 2px solid #9EB1C3;
+    border-left: 2px solid #9EB1C3;
+    border-right: 2px solid #9EB1C3;
+    border-top: 2px solid #9EB1C3; 
+    padding: 15px;
+    margin-top: -10px;
+}
+
+#hello-box {
+    height: 40px; width: auto; float: left; right: 0px; margin-right: 150px; position: absolute; border-right: 1px solid #FFFFFF;
+}
+
+#hello-box .hello-user {
+    color: #FFFFFF; font-size: 12pt;padding-top: 10px; padding-right:28px;
+}
+
+.menu-authorization, .menu-authorization-exit {
+    position: absolute; right: 30px; background: #7B97A4; width: 100px; height: 40px; -webkit-transition: all 0.5s; -o-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+}
+
+.menu-authorization:hover, .menu-authorization-exit:hover {
+    background: #7B929A;
+}
+
+.menu-authorization div, .menu-authorization-exit div {
+     margin-left: 10px; cursor: pointer; line-height: 2.45; float: left; background: url("/public/images/exit-logo.png") no-repeat scroll left center transparent;
+}
+
+.menu-authorization-exit input[type="submit"] {
+    height:38px;
+    border:none;
+    margin-left: 10px; 
+    cursor: pointer; 
+    line-height: 2.45; 
+    float: left; 
+    background: url("/public/images/exit-logo.png") no-repeat scroll left center transparent;
+    
+    font-size: 12pt; font-weight: bold; font-family: sans-serif;
+}
+
+.menu-authorization div:after {
+    content: 'Войти'; color: #ffffff; cursor: pointer; font-size: 12pt; font-weight: bold; font-family: sans-serif; margin-left: 30px;
+}
+
+.menu-authorization-exit div:after {
+    content: 'Выйти'; color: #ffffff; cursor: pointer; font-size: 12pt; font-weight: bold; font-family: sans-serif; margin-left: 30px;
+}
+
+#authorization-box {
+   z-index: 1001; position: absolute; right:10px; top:45px;width: 270px;height: 160px;background: #7B929A;box-shadow: 0 5px 10px 3px darkgray; font-size: 11pt; padding: 4px; display: block;
+}
+
+#authorization-box .authorization-title {
+    color:#ffffff;font-weight: bold;padding-bottom: 0px;padding-left: 7px;padding-top: 4px;
+}
+
+#authorization-box .authorization-form {
+    width: 270px; background: #ffffff; height: 125px;
+}
+
+#authorization-box .authorization-form table {
+    width:260px; max-width: 260px; margin: 4px; border-collapse: collapse; border:0px;
+}
+
+#authorization-box .authorization-form td {
+    border:0px;
+}
+
+#authorization-box .authorization-form .authorization-login, .authorization-password {
+    font-size: 10pt;color: #37606F;margin-right: 10px;margin-top: 10px;
+}
+
+#authorization-box .authorization-form input[type="text"], input[type="password"] {
+    width: 150px; height: 20px; padding-left: 10px; padding-top: 0; padding-bottom: 0; padding-right: 10px;
+}
+
+#authorization-box .button-block {
+    margin-left: 18px;
+}
+
+#authorization-box button, input[type="submit"] {
+    float:left;height: 30px;width: 100px;margin: 0px 5px 0px 10px; color: #ffffff; border-radius: 3px;
+}
+
+#authorization-box button[id="authorization-enter"] {
+    background: #3AB95B;border: 1px solid #3AB95B;
+}
+
+#authorization-box input[type="submit"] {
+    background: #3AB95B;border: 1px solid #3AB95B;
+}
+
+#authorization-box button[id="authorization-cancel"] {
+    background: #88928B;border: 1px solid #88928B;
+}
+
+#export-box {
+    margin-top: 30px; margin-bottom: 10px;
+}
+
+#export-box .print {
+    background: url("/public/images/printer_white.png") no-repeat scroll 5px center #7B97A4;
+    
+    border: 1px solid #7B97A4; color: #FFFFFF; width: 100px; height: 30px; padding-left: 31px; border-radius: 3px;
+    
+    -webkit-transition: all 0.5s; -o-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+}
+
+#export-box .print:hover {
+    background-color: #A7BCC3;
+}
+
+#export-box .to-excel {
+    background: url("/public/images/ms-excel_33x25.png") no-repeat scroll 7px center #7B97A4;
+    
+    border: 1px solid #7B97A4; color: #FFFFFF; width: 100px; height: 30px; padding-left: 40px; border-radius: 3px; margin-left: 10px;
+    
+    -webkit-transition: all 0.5s; -o-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+}
+
+#export-box .to-excel:hover {
+    background-color: #A7BCC3;
+}
+
+.fly {
+    cursor: pointer;
+    float: right;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+}
+
+.download-layer {
+    cursor: pointer;
+    float: right;
+    margin-right: 1px;
+}
+
+.info {
+    cursor: pointer;
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.dynamic-info {
+    float:left; cursor: pointer; margin: 0px 2px 0px 0px; margin: 0px 6px 0px 0px;
+}
+
+.printMap, .usgsDwnld {
+    margin: 5px 0px 0px 0px;
+    width: 48px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.printMap:hover, .usgsDwnld:hover {
+    background: #6B7B7E;
+    cursor: pointer;
+}
+
+.plus {
+    margin: 5px 0px 0px 0px;
+    width: 48px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.plus:hover {
+    background: #6B7B7E;
+    cursor: pointer;
+}
+
+#object-info-form .change {
+    width: 120px; height: 30px; border: 1px solid steelblue; border-radius: 3px; padding: 3px; background: steelblue; color: #FFFFFF; cursor: pointer; margin: 0px 0px 5px 0px;
+}
+
+#object-info-form .cancel {
+    width: 120px; height: 30px; border: 1px solid #88928B; border-radius: 3px; padding: 3px; background: #88928B; color: #FFFFFF; cursor: pointer; margin: 0px 0px 5px 0px;
+}
+
+#object-info-form .save {
+    width:120px; height:30px; border: 1px solid #3AB95B; border-radius:3px; padding:3px; background:#3AB95B; color:#FFFFFF; cursor:pointer; margin:0px 0px 5px 0px;
+}
+
+#set-farm, #unset-farm, #set-cultures, #download-image {
+    width: 250px; 
+    height: 30px; 
+    border: 1px solid #7B97A4; 
+    /*border-radius: 3px;*/ 
+    padding: 3px; 
+    background: #7B97A4; 
+    color: #FFFFFF; 
+    cursor: pointer; 
+    margin:5px 0px 5px 0px;
+    font-size: 11pt;
+    
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#set-farm:hover, #unset-farm:hover, #set-cultures:hover, #download-image:hover {
+    background: #A1B9C4;
+}
+
+/*Настройка отображения контрола измерения дистанции*/
+.dialogBox {
+    z-index: 9999;
+}
+
+.dialogBox .dialog-header {
+    cursor: move; height: 20px; font-size: 10pt;
+}
+
+.dialogBox .dialog-header h4 {
+    color: #FFFFFF; margin: -3px 0px 0px 3px; padding-left:0px;
+}
+
+#distanceBox .container {
+    padding: 0; width: 108px;
+}
+
+.control-distance .control-distance-km {
+    padding: 3px;
+}
+/*Изменение стандартного стиля bootstrap.css*/
+h4 {
+    font-size: 10pt; margin:0;
+}
+/***END***/
+
+#statistic-header {
+    
+}
+
+#statistic-header .span2 {
+    Width: 450px; Height: 150px;
+}
+
+#statistic-header .span2 div {
+    background: #86B402; height: 50px;
+}
+
+#statistic-header .span2 div p {
+    font-size: 16pt; font-family: Arial, sans-serif; color: #ffffff; letter-spacing: 1px; font-style: italic; text-align: center; text-align: -webkit-center; padding: 14px 0px 0px 0px;
+}
+
+#statistic-header .span2 div input[id="datepicker"], input[id="datepicker-from"], input[id="datepicker-to"] {
+    border: 1px solid #FFFFFF;height: 30px;width: 76px;margin: 0 37%;padding-left: 20px;padding-right: 20px;border-radius: 21px;
+}
+
+#statistic-header .span2 div input[id="datepicker-from"] {
+    margin: 0 21%;
+}
+
+#statistic-header .span2 div input[id="datepicker-to"] {
+    margin: -63px 0px 0px 52%;
+}
+
+#statistic-header .span2 button[id="show-stat"], button[id="show-stat-range"] {
+    width: 100%; height: 50px; background: #7B97A4; color: #ffffff; font-size: 16pt; letter-spacing: 1px; cursor:pointer; border: 1px solid #7B97A4; -webkit-transition: all 0.5s; -o-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+}
+
+#statistic-header .span2 button[id="show-stat"]:hover, button[id="show-stat-range"]:hover {
+    background: #A7BBC2;
+}
+
+#statistic-header .span2 div .defis {
+    margin: -5% 0 0 48.15%; border: 1px solid white; width: 12px; height: 2px; background: #FFFFFF; float: left;
+}
+
+#statistic-header .horizontal-line {
+    width: 110px; height: 3px; background: #7b97a4; margin: 0 0 3% 44.5%;
+}
