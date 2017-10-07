@@ -3,8 +3,8 @@
     $url_auth = 'http://krasnoyarsk-geomonitoring.ssc.ikit.sfu-kras.ru/authorization/comeIn/';
 	  
     $postfields_auth = array( 
-        'login_user'=>'depadmin',
-        'pass_user'=>'12345',
+        'login_user'=>'user',
+        'pass_user'=>'password',
     );
                 
     $ch_auth = curl_init();
